@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Endless Cyber Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Homepage Menu Screen -->
+        <div id="menu-screen">
+            <h1 class="game-title">CYBER<br>RUNNER</h1>
+            <p class="subtitle">NEON ARCADE TEMPLATE</p>
+            
+            <div class="menu-section">
+                <label>SELECT DIFFICULTY</label>
+                <div class="difficulty-btns">
+                    <button class="diff-btn" data-speed="4" data-interval="110">EASY</button>
+                    <button class="diff-btn active" data-speed="6" data-interval="85">NORMAL</button>
+                    <button class="diff-btn" data-speed="8" data-interval="65">HARD</button>
+                </div>
+            </div>
+
+            <button id="start-btn">START GAME</button>
+            <button id="highscore-btn">HIGH SCORES</button>
+        </div>
+
+        <!-- High Score Modal -->
+        <div id="highscore-modal" class="hidden">
+            <div class="modal-content">
+                <h2>HALL OF FAME</h2>
+                <div class="score-display-box">
+                    <span class="label">BEST RECORD:</span>
+                    <span id="best-score-val">1280</span>
+                </div>
+                <button id="close-modal-btn">BACK TO MENU</button>
+            </div>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud" class="hidden">
+            <div id="score-board">SCORE: <span id="score">0</span></div>
+            <div id="hi-score-board">HI: <span id="hi-score">1280</span></div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="controls-hint" class="hidden">TAP TO JUMP</div>
+        <div id="pause-btn" class="hidden">❚❚</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
